@@ -11,12 +11,13 @@
 <title>Каталог</title>
 </head>
 <body>
+  
 <div id="container">
 	<div id="header">
 		<div id="header">
 		<?php include('header.php')?>
 	</div>
-		
+
 	</div>
 	<div id="content">
 		<table  width="90%" align="center" cellpadding="1%" cellspacing="1%">
@@ -29,7 +30,7 @@
 		</table>
 		<?php
 			include ("bd.php");
-            
+
 			$query = 'select * from catalog';
 			$result = mysqli_query($link, $query);
 			while ($data = mysqli_fetch_assoc($result)) {
@@ -41,9 +42,9 @@
 				<td width="25%"><?php echo $data['size']?></th>
 				<td width="25%"><?php echo $data['cost']?></th>
 			</tr>
-			
-		
-					
+
+
+
 			</table>
 		<?php
 		}
@@ -54,6 +55,6 @@
 	</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="burger.js"></script> 
+<script src="burger.js"></script>
 </body>
 </html>
